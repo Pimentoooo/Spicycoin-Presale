@@ -3,7 +3,7 @@ import React, { useMemo, useState } from 'react'
 import { X } from 'react-feather'
 import styled from 'styled-components'
 import tokenLogo from '../../assets/images/token-logo.png'
-import { injected } from '../../connectors'
+// import { injected } from '../../connectors'
 import { PNG } from '../../constants'
 import { useTotalSupply } from '../../data/TotalSupply'
 import { useActiveWeb3React } from '../../hooks'
@@ -36,24 +36,24 @@ const StyledClose = styled(X)`
     cursor: pointer;
   }
 `
-const AddPNG = styled.span`
-  width: 100%;
-  height: 100%;
-  font-weight: 500;
-  font-size: 32;
-  padding: 4px 6px;
-  align-items: center;
-  text-align: center;
-  background-color: ${({ theme }) => theme.bg3};
-  background: radial-gradient(174.47% 188.91% at 1.84% 0%, #f97316 0%, #e84142 100%), #edeef2;
-  border-radius: 12px;
-  white-space: nowrap;
-  cursor: pointer;
+// const AddPNG = styled.span`
+//   width: 100%;
+//   height: 100%;
+//   font-weight: 500;
+//   font-size: 32;
+//   padding: 4px 6px;
+//   align-items: center;
+//   text-align: center;
+//   background-color: ${({ theme }) => theme.bg3};
+//   background: radial-gradient(174.47% 188.91% at 1.84% 0%, #f97316 0%, #e84142 100%), #edeef2;
+//   border-radius: 12px;
+//   white-space: nowrap;
+//   cursor: pointer;
 
-  :hover {
-    opacity: 0.8;
-  }
-`
+//   :hover {
+//     opacity: 0.8;
+//   }
+// `
 
 /**
  * Content for balance stats modal
@@ -98,7 +98,7 @@ export default function PngBalanceContent({ setShowPngBalanceModal }: { setShowP
         <CardNoise />
         <CardSection gap="md">
           <RowBetween>
-            <TYPE.white color="white">{t('header.pngBreakDown')}</TYPE.white>
+            <TYPE.white color="white">{t('sdfsdfsdfpngBreakDown')}</TYPE.white>
             <StyledClose stroke="white" onClick={() => setShowPngBalanceModal(false)} />
           </RowBetween>
         </CardSection>
@@ -151,7 +151,7 @@ export default function PngBalanceContent({ setShowPngBalanceModal }: { setShowP
             </RowBetween>
           </AutoColumn>
         </CardSection>
-        {account && (
+        {/* {account && (
           <>
           <CardSection gap="sm">
             <AutoColumn gap="md">
@@ -182,7 +182,7 @@ export default function PngBalanceContent({ setShowPngBalanceModal }: { setShowP
           </CardSection>
           </>
           )
-        }
+        } */}
       </ModalUpper>
     </ContentWrapper>
   )

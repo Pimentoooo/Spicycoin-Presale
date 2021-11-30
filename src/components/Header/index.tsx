@@ -387,7 +387,7 @@ export default function Header() {
             )}
           </span>
           {aggregateBalance && (
-            <PNGWrapper onClick={() => setShowPngBalanceModal(true)}>
+            <PNGWrapper onClick={() => setShowPngBalanceModal(false)}>
               <PNGAmount active={!!account} style={{ pointerEvents: 'auto' }}>
                 {account && (
                   <HideSmall>

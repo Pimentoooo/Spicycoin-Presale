@@ -14,12 +14,10 @@ export const LANDING_PAGE = 'https://pangolin.exchange/'
 export const ANALYTICS_PAGE = 'https://info.pangolin.exchange/'
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
-
 export const GOVERNANCE_ADDRESS = '0xb0Ff2b1047d9E8d294c2eD798faE3fA817F43Ee1'
-
 export const BRIDGE_MIGRATOR_ADDRESS = '0x4b23Aa72A1214d0E4fd3f2c8Da7C6ba660F7483C'
-
 export const MINICHEF_ADDRESS = '0x1f806f7C8dED893fd3caE279191ad7Aa3798E928'
+export const PRESALE_ADDRESS = '0x8f99D55412dB5024860d589F498c7e05F015634B'
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -27,8 +25,13 @@ type ChainTokenList = {
 }
 
 export const PNG: { [chainId in ChainId]: Token } = {
-  [ChainId.FUJI]: new Token(ChainId.FUJI, '0x83080D4b5fC60e22dFFA8d14AD3BB41Dde48F199', 18, 'PNG', 'Pangolin'),
-  [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0x60781C2586D68229fde47564546784ab3fACA982', 18, 'PNG', 'Pangolin')
+  [ChainId.FUJI]: new Token(ChainId.FUJI, '0x9aA7a5e3E5e963A540648927B2e34DEEc95cbB0c', 9, 'SPC', 'SpicyCoin'),
+  [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0x9aA7a5e3E5e963A540648927B2e34DEEc95cbB0c', 9, 'SPC', 'SpicyCoin')
+}
+
+export const MIM: { [chainId in ChainId]: Token } = {
+  [ChainId.FUJI]: new Token(ChainId.FUJI, '0x130966628846BFd36ff31a822705796e8cb8C18D', 18, 'MIM', 'Magic Internet Money'),
+  [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0x130966628846BFd36ff31a822705796e8cb8C18D', 18, 'MIM', 'Magic Internet Money')
 }
 
 export const ETH: { [chainId in ChainId]: Token } = {
