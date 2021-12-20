@@ -56,7 +56,7 @@ export function useAllowedBuy(account: string | null | undefined): boolean {
 export function useUserUnclaimedAmount(account: string | null | undefined): TokenAmount | undefined {
 	
 	const presaleContract = usePresaleContract()
-	const response = useSingleCallResult(presaleContract, 'usersSaleInfo', [account ? account : undefined])
+	const response = useSingleCallResult(presaleContract, 'preBuys', [account ? account : undefined])
 	const spc = PNG[43114]
 	const res = account && response.result ? new TokenAmount(spc, JSBI.BigInt(response.result?.[1])) : new TokenAmount(spc, JSBI.BigInt(0))
 	return res
