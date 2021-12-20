@@ -105,8 +105,8 @@ export default function Whitelist() {
   const userMimAmount = useTokenBalance(account ?? undefined, mim)
   const mimBalance = userMimAmount ? Number(userMimAmount.toExact()) : 0
   const isInsufficent = Number(amount) > mimBalance
-  const goodtosee = (nstring: string) => {
-    return Number(nstring)/(10 ** 18)
+  const goodtosee = (nstring: string, decimals = 18) => {
+    return Number(nstring)/(10 ** decimals)
   }
   const isLimited = Number(amount) < goodtosee(minMimLimit.toString()) || Number(amount) > goodtosee(maxMimLimit.toString())
   const handleSubmit = (data: Data) => {
@@ -164,7 +164,7 @@ export default function Whitelist() {
               <Text fontSize="18px" textAlign="center" mb="20px">{t('Enter the amount you want to participate (MIM)')}</Text>
               <Text fontSize="18px" textAlign="center" mb="20px">The minimum amount is {goodtosee(minMimLimit.toString())} $MIM</Text>
               <Text fontSize="18px" textAlign="center" mb="20px">The maximum amount is {goodtosee(maxMimLimit.toString())} $MIM</Text>
-              <Text fontSize="18px" textAlign="center" mb="20px">1 SPC = {goodtosee(tokenPrice.toString())} $MIM</Text>
+              <Text fontSize="18px" textAlign="center" mb="20px">1 SPC = {goodtosee(tokenPrice.toString(), 9)} $MIM</Text>
               { isOpen ? 
                 <>
                   <StyledInput>

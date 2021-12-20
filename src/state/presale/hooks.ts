@@ -27,7 +27,7 @@ export function useMaxLimitVip() {
 
 export function useTokenPrice() {
 	const presaleContract = usePresaleContract()
-	const response = useSingleCallResult(presaleContract, 'tokenPrice', [])
+	const response = useSingleCallResult(presaleContract, 'rate', [])
 	const result = response.result ? JSBI.BigInt(response.result?.[0]) : JSBI.BigInt(0)
 	return result
 }
