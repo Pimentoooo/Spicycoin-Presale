@@ -115,6 +115,16 @@
     "type": "function"
 }, {
     "inputs": [],
+    "name": "getClaimableAmount",
+    "outputs": [{
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+    }],
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "inputs": [],
     "name": "getPercentReleased",
     "outputs": [{
         "internalType": "uint256",
