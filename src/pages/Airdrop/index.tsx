@@ -17,7 +17,6 @@ import { useTokenBalance } from '../../state/wallet/hooks'
 import { UNI, SUSHI } from '../../constants'
 import { ChainId, JSBI } from '@pangolindex/sdk'
 import { useTranslation } from 'react-i18next'
-import { getClaimableAmount } from '../../state/presale/hooks'
 
 const PageWrapper = styled(AutoColumn)``
 
@@ -73,7 +72,7 @@ export default function Vote() {
   const claimingAllowed = useAirdropIsClaimingAllowed()
   const canClaim = useUserHasAvailableClaim(account)
 
-  const claimAmount = getClaimableAmount()
+  const claimAmount = useUserUnclaimedAmount(account)
 
   const uniAmount = useTokenBalance(account ? account : undefined, chainId ? UNI[chainId] : UNI[ChainId.AVALANCHE])
   const sushiAmount = useTokenBalance(

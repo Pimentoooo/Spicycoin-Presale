@@ -8,8 +8,6 @@ import { CardSection } from '../earn/styled'
 import styled from "styled-components";
 import { useTranslation } from 'react-i18next'
 
-
-
 const AddPNG = styled.span`
   width: 100%;
   height: 100%;
@@ -49,7 +47,7 @@ export default function AddSPC() {
                             address: png?.address,
                             symbol: png?.symbol,
                             decimals: png?.decimals,
-                            image: 'https://raw.githubusercontent.com/pangolindex/tokens/main/assets/0x60781C2586D68229fde47564546784ab3fACA982/logo.png',
+                            image: "http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/hot-pepper.png",
                           },
                         },
                       }).catch((error: any) => {

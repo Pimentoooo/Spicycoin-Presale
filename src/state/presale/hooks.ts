@@ -39,6 +39,15 @@ export function useOpenStatus() {
 	return result
 }
 
+export function useClaimAmount(account: string | null | undefined): TokenAmount | undefined{
+	const presaleContract = usePresaleContract()
+	const response = useSingleCallResult(presaleContract, 'getClaimableAmount', [account ? account : undefined])
+	console.log("debug aaa", response);
+	const spc = PNG[43114]
+	const res = account && response.result ? new TokenAmount(spc, JSBI.BigInt(response.result?.[0])) : new TokenAmount(spc, JSBI.BigInt(0))
+	return res
+}
+
 export function useAllowedVipBuy(account: string | null | undefined): boolean {
 	const presaleContract = usePresaleContract()
 	const response = useSingleCallResult(presaleContract, 'vipWhiteListed', [account ? account : undefined])

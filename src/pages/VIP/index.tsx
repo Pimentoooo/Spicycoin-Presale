@@ -213,7 +213,7 @@ export default function Whitelist() {
                     :
                     <>
                       <Text fontSize="15px" textAlign="center" mt="20px" color="#FF6B00">{t('You are not allowed to buy as VIP')}</Text>
-                      <ContactLink  href="https://t.me/spicycoin">
+                      <ContactLink  href="http://discord.gg/spicy">
                         {t('Contact Support')}
                       </ContactLink>
                     </>

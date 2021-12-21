@@ -114,7 +114,11 @@
     "stateMutability": "view",
     "type": "function"
 }, {
-    "inputs": [],
+    "inputs": [{
+        "internalType": "address",
+        "name": "_account",
+        "type": "address"
+    }],
     "name": "getClaimableAmount",
     "outputs": [{
         "internalType": "uint256",

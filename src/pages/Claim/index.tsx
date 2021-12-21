@@ -4,12 +4,12 @@ import {Wrapper} from "../../components/swap/styleds";
 import PurchaseForm, {Data } from "../../components/PurchaseForm"
 import { useActiveWeb3React } from "../../hooks";
 import { usePresaleContract } from '../../hooks/useContract'
-import { useOpenStatus, useUserUnclaimedAmount } from '../../state/presale/hooks'
+import { useOpenStatus, useClaimAmount } from '../../state/presale/hooks'
 import {ButtonPrimary} from "../../components/Button";
 import { Dots } from '../../components/swap/styleds'
 import { useTranslation } from 'react-i18next'
 import AddSPC from "../../components/AddSPC";
-import { Text, /* Text */ } from 'rebass'
+import { Text } from 'rebass'
 import { TransactionResponse } from '@ethersproject/providers'
 import { useTransactionAdder } from '../../state/transactions/hooks'
 import styled from "styled-components";
@@ -29,7 +29,7 @@ export default function Claim() {
   const { t } = useTranslation()
   const { account } = useActiveWeb3React()
   const isOpen = useOpenStatus()
-  const unClaimed = useUserUnclaimedAmount(account)
+  const unClaimed = useClaimAmount(account)
   
   console.log('debug->unClaimed', unClaimed)
   const handleSubmit = (data: Data) => {
