@@ -6,7 +6,7 @@ import { TYPE } from '../../theme'
 import { AutoColumn } from '../Column'
 import { CardSection } from '../earn/styled'
 import styled from "styled-components";
-import { useTranslation } from 'react-i18next'
+// import { useTranslation } from 'react-i18next'
 
 const AddPNG = styled.span`
   width: 100%;
@@ -31,7 +31,7 @@ export default function AddSPC() {
 
     const { chainId } = useActiveWeb3React()
     const png = chainId ? PNG[chainId] : undefined
-    const { t } = useTranslation()
+    // const { t } = useTranslation()
 
     return (
             <CardSection gap="sm">
@@ -57,7 +57,7 @@ export default function AddSPC() {
                   });
                 }
               }>
-                  <TYPE.white color="white">{t('header.addMetamask')}</TYPE.white>
+                  <TYPE.white color="white">Add SPC to MetaMask</TYPE.white>
                 </AddPNG>
               </AutoColumn>
             </CardSection>
