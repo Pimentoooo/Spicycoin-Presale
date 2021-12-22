@@ -163,7 +163,7 @@ export default function Whitelist() {
               <Text fontSize="18px" textAlign="center" mb="20px">{t('Enter the amount you want to participate (MIM)')}</Text>
               <Text fontSize="18px" textAlign="center" mb="20px">The minimum amount is {goodtosee(minMimLimit.toString())} $MIM</Text>
               <Text fontSize="18px" textAlign="center" mb="20px">The maximum amount is {goodtosee(maxMimLimit.toString())} $MIM</Text>
-              <Text fontSize="18px" textAlign="center" mb="20px">1 SPC = {goodtosee(tokenPrice.toString(), 9)} $MIM</Text>
+              <Text fontSize="18px" textAlign="center" mb="20px">1 SPC = {1 / goodtosee(tokenPrice.toString(), 9)} $MIM</Text>
               { isOpen ? 
                 <>
                   <StyledInput>
